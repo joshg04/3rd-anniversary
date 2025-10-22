@@ -1,0 +1,367 @@
+.section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  padding: 0 10%;
+}
+
+.section h1 {
+  font-size: 4rem;
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.section-1 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-image: url('../../images/oregon1.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+}
+
+/* Optional: Add overlay for better text readability */
+.section-1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* Dark overlay - adjust opacity as needed */
+  animation: fadeIn 1.5s ease-in;
+  /* Remove this overlay by setting opacity to 0 or deleting this ::before block */
+}
+
+.section-1-content,
+.section-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+/* Fade-in animation for text */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-text {
+  animation: fadeIn 1.5s ease-out forwards;
+  opacity: 0;
+}
+
+.fade-in-delay {
+  animation-delay: 0.5s;
+}
+
+.section-1-content h1,
+.section-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.section-1-content p,
+.section-content p {
+  font-size: 1.5rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.section-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+.section-content li {
+  margin-bottom: 0.75rem;
+}
+
+.section-content li::before {
+  font-weight: 700;
+}
+
+.section-content li strong {
+  font-weight: 700;
+}
+
+/* Masked text reveal effect */
+.masked-text {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.masked-text::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -10px;
+  right: -10px;
+  bottom: -5px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 8px;
+  transition: opacity 0.5s ease, backdrop-filter 0.5s ease;
+  z-index: 1;
+}
+
+.masked-text.revealed::before {
+  opacity: 0;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  pointer-events: none;
+}
+
+.section-2 {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background-image: url('/images/section2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Optional: Add overlay for better text readability in section 2 */
+.section-2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.section-2 .section-content {
+  position: relative;
+  z-index: 1;
+}
+
+.section-3 {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  background-image: url('/images/section3.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.section-3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.section-3 .section-content {
+  position: relative;
+  z-index: 1;
+}
+
+.section-4 {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  background-image: url('/images/section4.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.section-4::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.section-4 .section-content {
+  position: relative;
+  z-index: 1;
+}
+
+.section-5 {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  background-image: url('/images/section5.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.section-5::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.section-5 .section-content {
+  position: relative;
+  z-index: 1;
+}
+
+.section-6 {
+  background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+  background-image: url('/images/section6.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.section-6::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.section-6 .section-content {
+  position: relative;
+  z-index: 1;
+}
+
+.section-7 {
+  background: black;
+}
+
+.section-7::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.section-7 .section-content {
+  position: relative;
+  z-index: 1;
+}
+
+.section-8 {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+  background-image: url('/images/section8.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.section-8::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.section-8 .section-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .section {
+    padding: 0 5%;
+  }
+
+  .section h1 {
+    font-size: 2.5rem;
+  }
+
+  .section-1-content h1,
+  .section-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-1-content p,
+  .section-content p {
+    font-size: 1.1rem;
+  }
+
+  .section-content ul {
+    font-size: 1.1rem;
+  }
+
+  .section-content li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 0 3%;
+  }
+
+  .section h1 {
+    font-size: 2rem;
+  }
+
+  .section-1-content h1,
+  .section-content h1 {
+    font-size: 2rem;
+  }
+
+  .section-1-content p,
+  .section-content p {
+    font-size: 1rem;
+  }
+
+  .section-content ul {
+    font-size: 1rem;
+  }
+
+  .masked-text::before {
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+}
